@@ -13,6 +13,78 @@ nav {
   margin-bottom: 50px;
 }
 
+@media only screen and (max-width:900px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu a {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .menu a.active {
+    border-bottom: 3px solid #2d3648;
+  }
+  
+  .aboutMeSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutMeSection img {
+    align-items: center;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .introAboutMe {
+    margin-right: 0px;
+    text-align: center;
+  }
+
+  .introAboutMe h1, .introAboutMe p {
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+
+  .quoteSection img {
+    align-items: center;
+    margin-bottom: 20px;
+    width: 160%;
+  }
+
+  .myWorkSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "image"
+    "content";
+    align-items: center;
+    gap: 50px;
+  }
+
+  .parentImage img{
+    display: grid;
+    padding-left: 40px;
+    width: 200%;
+    grid-area: image;
+  }
+
+  .content-workSection {
+    display: grid;
+    grid-area: content;
+    
+  }
+
+}
+
 .logo {
   height: 48px;
   width: 238px;
@@ -35,14 +107,14 @@ nav {
   border-bottom: 3px solid #2d3648;
 }
 
-.aboutMe {
+.aboutMeSection {
   display: flex;
   align-items: center;
   gap: 50px;
   color: #2d3648;
 }
 
-.aboutMe img {
+.aboutMeSection img {
   padding-left: 40px;
   max-width: 700px;
   border-radius: 50%;
@@ -74,6 +146,46 @@ nav {
 
 .quoteSection img {
   max-width: 1100px;
+}
+
+.heading-workSection {
+  padding-left: 40px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.myWorkSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "image content";
+  align-items: center;
+  gap: 50px;
+  color: #2d3648;
+}
+
+.parentImage img{
+  padding-left: 40px;
+  max-width: 700px;
+  grid-area: image;
+}
+
+.content-workSection {
+  display: grid;
+  grid-area: content;
+}
+
+.content-workSection h4 {
+  padding-right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.content-workSection p {
+  padding-right: 30px;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .footer {
